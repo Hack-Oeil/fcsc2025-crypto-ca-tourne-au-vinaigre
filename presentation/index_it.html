@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head lang="it">
+    <meta charset="UTF-8">
+    <!--Page Title-->
+    <title>Hack-Oeil - I CTF di Cyrhades</title>
+    <!--Meta Keywords and Description-->
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
+    <link rel="shortcut icon" href="./assets/images/favicon.ico" title="Favicon" />
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800' rel='stylesheet' type='text/css'>
+    <script src="./assets/js/highlight.min.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Controlla se la finestra è in un iframe
+            if (window.self !== window.top) {
+                document.querySelectorAll('a').forEach((link) => {
+                    link.addEventListener('click', (event) => {
+                        const a = event.target.closest('a[href^="http"]');
+                        if (a) {
+                            event.preventDefault();
+                            window.parent.postMessage({
+                                type: "open-external",
+                                url: a.href
+                            }, "*");
+                        }
+                    });
+                });
+            }
+            // Attiva l'evidenziazione della sintassi :
+            if (window.hljs) {
+                hljs.highlightAll();
+            } else {
+                console.error("Highlight.js non caricato!");
+            }
+        });
+    </script>
+</head>
+
+<body>
+
+    <div id="wrapper">
+        <!--Main Content Area-->
+        <main id="content">
+            <!--Ctf-->
+            <section class="ctf scrollto">
+                <article class="row clearfix">
+                    <div class="col-1">
+                        <div class="section-heading">
+                            <h3>Challenge #579</h3>
+                            <h2 class="section-title">Ça tourne au vinaigre</h2>
+                            <p>
+- [Nonno] Ragazzi, penso che il cuoco fosse un po' troppo determinato a implementare l'UOV a modo suo. La crittografia multivariata non è per chiunque. Sono riuscito a raccogliere alcune firme, dovremmo riuscire a rompere la sua implementazione. Per farlo, basta pren…
+- [Nipote 1] Nonno?
+- [Nipote 2] Nonno, tutto bene?
+- [Nipote 1] Non respira più… È terribile.
+- [Nipote 2] Ma non ha nemmeno fornito la chiave pubblica, come faremo?
+                            </p>
+                            <h4>File da studiare:</h4>
+                            <ul>
+                                <li><a href="../files/ca-tourne-au-vinaigre.sage">ca-tourne-au-vinaigre.sage</a></li>
+                                <li><a href="../files/output.txt">output.txt</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="row clearfix">
+                    <div class="col-1">
+                        <div class="section-heading">
+                            <h3>FCSC 2025</h3>
+                            <h2 class="section-title">Hackropole</h2>
+                            <p class="section-subtitle">
+                                Link ufficiale :
+                                <a target="_blank" href="https://hackropole.fr/fr/challenges/crypto/fcsc2025-crypto-ca-tourne-au-vinaigre/">https://hackropole.fr/fr/challenges/crypto/fcsc2025-crypto-ca-tourne-au-vinaigre/</a>
+                                <br />
+                                Autore: graniter
+                            </p>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="row clearfix">
+                    <div class="col-1">
+                        <div class="section-heading">
+                            <h3>Apprendimento</h3>
+                            <h2 class="section-title">Documentazione e Video</h2>
+                            <p class="section-subtitle">
+                                Nessuna documentazione al momento
+                            </p>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="row clearfix">
+                    <div class="col-1">
+                        <div class="section-heading">
+                            <h3>Aiuto</h3>
+                            <h2 class="section-title">Consigli e indizi</h2>
+                            <p class="section-subtitle">
+                                <a target="_blank"
+                                    href="https://discord.com/channels/1175764392307077120/1175764601716092948">Discussione su Discord</a>
+                            </p>
+                        </div>
+                    </div>
+                </article>
+            </section>
+            <!--End of Ctf-->
+        </main>
+        <!--End Main Content Area-->
+
+        <a id="scrollUp" href="#wrapper" style="position: fixed; z-index: 1000;"
+            aria-label="Torna in cima alla pagina" title="Torna all'inizio del sito"></a>
+    </div>
+</body>
+
+</html>

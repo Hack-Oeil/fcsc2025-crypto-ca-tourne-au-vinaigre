@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="th">
+
+<head lang="th">
+    <meta charset="UTF-8">
+    <!--Page Title-->
+    <title>Hack-Oeil - CTF ของ Cyrhades</title>
+    <!--Meta Keywords and Description-->
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
+    <link rel="shortcut icon" href="./assets/images/favicon.ico" title="Favicon" />
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800' rel='stylesheet' type='text/css'>
+    <script src="./assets/js/highlight.min.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // ตรวจสอบว่าหน้าต่างอยู่ใน iframe หรือไม่
+            if (window.self !== window.top) {
+                document.querySelectorAll('a').forEach((link) => {
+                    link.addEventListener('click', (event) => {
+                        const a = event.target.closest('a[href^="http"]');
+                        if (a) {
+                            event.preventDefault();
+                            window.parent.postMessage({
+                                type: "open-external",
+                                url: a.href
+                            }, "*");
+                        }
+                    });
+                });
+            }
+            // เปิดใช้งานการเน้นไวยากรณ์โค้ด :
+            if (window.hljs) {
+                hljs.highlightAll();
+            } else {
+                console.error("Highlight.js ไม่ได้ถูกโหลด!");
+            }
+        });
+    </script>
+</head>
+
+<body>
+
+    <div id="wrapper">
+        <!--Main Content Area-->
+        <main id="content">
+            <!--Ctf-->
+            <section class="ctf scrollto">
+                <article class="row clearfix">
+                    <div class="col-1">
+                        <div class="section-heading">
+                            <h3>โจทย์ #579</h3>
+                            <h2 class="section-title">Ça tourne au vinaigre</h2>
+                            <p>
+- [คุณปู่] หลาน ๆ ปู่คิดว่าพ่อครัวตั้งใจเขียน UOV ในแบบของตัวเองมากเกินไปหน่อย การเข้ารหัสแบบหลายตัวแปรไม่ใช่เรื่องง่ายสำหรับทุกคน ปู่เก็บลายเซ็นมาได้สองสามอัน เราน่าจะเจาะการทำงานของเขาได้ สำหรับเรื่องนี้ แค่ต้อง…
+- [หลาน 1] คุณปู่?
+- [หลาน 2] คุณปู่ เป็นอะไรไหม?
+- [หลาน 1] คุณปู่ไม่หายใจแล้ว… แย่แล้ว
+- [หลาน 2] แต่คุณปู่ยังไม่ได้ให้คีย์สาธารณะมาเลย แล้วพวกเราจะทำยังไงกันดี?
+                            </p>
+                            <h4>ไฟล์ที่ต้องศึกษา:</h4>
+                            <ul>
+                                <li><a href="../files/ca-tourne-au-vinaigre.sage">ca-tourne-au-vinaigre.sage</a></li>
+                                <li><a href="../files/output.txt">output.txt</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="row clearfix">
+                    <div class="col-1">
+                        <div class="section-heading">
+                            <h3>FCSC 2025</h3>
+                            <h2 class="section-title">Hackropole</h2>
+                            <p class="section-subtitle">
+                                ลิงก์อย่างเป็นทางการ :
+                                <a target="_blank" href="https://hackropole.fr/fr/challenges/crypto/fcsc2025-crypto-ca-tourne-au-vinaigre/">https://hackropole.fr/fr/challenges/crypto/fcsc2025-crypto-ca-tourne-au-vinaigre/</a>
+                                <br />
+                                ผู้เขียน: graniter
+                            </p>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="row clearfix">
+                    <div class="col-1">
+                        <div class="section-heading">
+                            <h3>การเรียนรู้</h3>
+                            <h2 class="section-title">เอกสารและวิดีโอ</h2>
+                            <p class="section-subtitle">
+                                ยังไม่มีเอกสารในขณะนี้
+                            </p>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="row clearfix">
+                    <div class="col-1">
+                        <div class="section-heading">
+                            <h3>ความช่วยเหลือ</h3>
+                            <h2 class="section-title">คำแนะนำและคำใบ้</h2>
+                            <p class="section-subtitle">
+                                <a target="_blank"
+                                    href="https://discord.com/channels/1175764392307077120/1175764601716092948">เธรดบน Discord</a>
+                            </p>
+                        </div>
+                    </div>
+                </article>
+            </section>
+            <!--End of Ctf-->
+        </main>
+        <!--End Main Content Area-->
+
+        <a id="scrollUp" href="#wrapper" style="position: fixed; z-index: 1000;"
+            aria-label="เลื่อนขึ้นด้านบน" title="กลับไปด้านบนสุด"></a>
+    </div>
+</body>
+
+</html>
